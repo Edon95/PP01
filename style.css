@@ -11,13 +11,20 @@ body {
   background-color: #ffff;
   font-family: "Objective", sans-serif;
 }
-
+h1,
+h2 {
+  color: #260041;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
 h1 {
   font-size: 50px;
-  font-weight: 500;
-  color: #260041;
-  letter-spacing: 0.04em;
   padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 46px;
 }
 
 p {
@@ -35,7 +42,9 @@ p {
 
 .container {
   max-width: 950px;
+  padding: 10px;
 }
+
 section.sec1 {
   width: 100%;
   height: 768px;
@@ -76,7 +85,7 @@ section.sec1 .navbar {
 /* LANDING PAGE  */
 section.sec1 .landing {
   padding-top: 230px;
-    display: flex;
+  display: flex;
 }
 
 .landing .left-side {
@@ -89,7 +98,7 @@ section.sec1 .landing {
   font-weight: 300;
   font-size: 20px;
   line-height: 36px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .left-side .btn-primary {
@@ -100,25 +109,83 @@ section.sec1 .landing {
   margin-left: 20px;
 }
 
-
 .left-side .btn-primary img {
   height: 34px;
   padding-top: 3px;
 }
 
 .right-side {
-    position:relative;
+  position: relative;
 }
 
-.right-side img:nth-child(1){
-    position: absolute;
-    width: 280px;
-    bottom: -75px;
-    left: 230px;
+.right-side img:nth-child(1) {
+  position: absolute;
+  width: 280px;
+  bottom: -75px;
+  left: 230px;
 }
-.right-side img:nth-child(2){
-    position: absolute;
-    width: 240px;
-    bottom: -74px;
-    left: 75px;
+.right-side img:nth-child(2) {
+  position: absolute;
+  width: 240px;
+  bottom: -74px;
+  left: 75px;
+}
+
+section.sec2 .container {
+  margin: 145px auto 145px;
+  height: 1175px;
+}
+
+section::before {
+  background: url(ressources/square-blue.png);
+  float: right;
+  display: block;
+}
+
+section.sec2 {
+  position: relative;
+}
+
+section.sec2 h2 {
+  position: absolute;
+  width: 395px;
+}
+
+.sec2 .cards {
+  height: 1175px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  position: relative;
+  z-index: 10;
+
+}
+
+.sec2 .card {
+  position: relative;
+  width: 380px;
+  height: 525px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 4px rgba(97, 165, 255, 0.342);
+  padding: 48px;
+  margin-left: 50px;
+}
+
+
+.sec2 .card::before {
+  position: absolute;
+  content:"";
+  background-image: url("/ressources/point-group.png");
+  height: 154px;
+  width: 154px;
+  z-index: -10;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+   
+ }
+.sec2 .card:nth-child(2){
+  margin-top: 110px;
 }
